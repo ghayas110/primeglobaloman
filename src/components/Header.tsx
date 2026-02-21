@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -6,11 +9,19 @@ import {
   FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
+  FaBars,
+  FaTimes,
 } from 'react-icons/fa';
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <header className="w-full">
+    <header className="w-full relative">
       {/* Top Bar */}
       <div className="bg-brand-gray text-brand-subtext text-sm py-2 px-4 md:px-8 flex justify-between items-center">
         <div className="flex items-center space-x-6">
@@ -94,11 +105,56 @@ export default function Header() {
           </a>
         </div>
         
-        {/* Mobile Menu Button - Placeholder */}
-        <button className="md:hidden text-brand-secondary text-2xl">
-          ☰
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-brand-secondary text-2xl focus:outline-none"
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg absolute top-full left-0 w-full z-40 border-t border-gray-100 flex flex-col">
+          <Link
+            href="/"
+            onClick={toggleMobileMenu}
+            className="text-brand-text hover:text-brand-primary font-bold transition-colors uppercase py-4 px-6 border-b border-gray-100"
+          >
+            Home
+          </Link>
+          <Link
+            href="/introduction"
+            onClick={toggleMobileMenu}
+            className="text-brand-text hover:text-brand-primary font-bold transition-colors uppercase py-4 px-6 border-b border-gray-100"
+          >
+            Introduce
+          </Link>
+          <Link
+            href="/services"
+            onClick={toggleMobileMenu}
+            className="text-brand-text hover:text-brand-primary font-bold transition-colors uppercase py-4 px-6 border-b border-gray-100"
+          >
+            Service
+          </Link>
+          <Link
+            href="/contact"
+            onClick={toggleMobileMenu}
+            className="text-brand-text hover:text-brand-primary font-bold transition-colors uppercase py-4 px-6 border-b border-gray-100"
+          >
+            Contact
+          </Link>
+          <div className="p-6">
+            <a
+              href="tel:0096877349876"
+              className="bg-brand-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition-colors font-bold flex items-center justify-center uppercase w-full shadow-md"
+            >
+              <FaPhoneAlt className="mr-2" /> CALL: 00968 7734 9876
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
