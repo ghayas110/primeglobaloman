@@ -11,13 +11,13 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-primary text-white pt-16 pb-8">
+    <footer className="bg-[#0a0c0f] border-t-4 border-brand-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           
           {/* Column 1: Contact Us */}
-          <div className="lg:col-span-2">
-            <div className="bg-white p-2 rounded inline-block mb-6">
+          <div className="lg-col-span-2">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-2 rounded inline-block mb-6 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
               <Image
                 src="/images/logo.png"
                 alt="THE NIAZI'S LOGISTICS Logo"
@@ -29,19 +29,16 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0 mr-3 text-white" />
-                <span>319 C16 Ly Thuong Kiet, Phuong 15, Quan 11, Tp.HCM</span>
+                <span>New Quaid e Azam Truck Stand، Plot # 455 A Gate. 3 street no. 3, Hawksbay Rd, Karachi, 75760</span>
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="flex-shrink-0 mr-3 text-white" />
-                <a href="tel:0769220162" className="hover:text-gray-200 transition-colors">076 922 0162</a>
+                <a href="tel:0769220162" className="hover:text-gray-200 transition-colors">+92 304 2796697</a>
               </li>
+            
               <li className="flex items-center">
                 <FaEnvelope className="flex-shrink-0 mr-3 text-white" />
-                <a href="mailto:demonhunterg@gmail.com" className="hover:text-gray-200 transition-colors">demonhunterg@gmail.com</a>
-              </li>
-              <li className="flex items-center">
-                <FaEnvelope className="flex-shrink-0 mr-3 text-white" />
-                <a href="mailto:info@primeglobaloman.com" className="hover:text-gray-200 transition-colors">info@primeglobaloman.com</a>
+                <a href="mailto:info@niazlogistics.com" className="hover:text-gray-200 transition-colors">info@niazlogistics.com</a>
               </li>
             </ul>
           </div>
@@ -102,18 +99,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-orange-400 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} THE NIAZI'S LOGISTICS. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 rounded-full bg-white text-brand-primary flex items-center justify-center hover:bg-gray-100 transition-colors">
+            <a href="#" className="w-10 h-10 rounded-full bg-[#1a1c23] border border-white/10 text-brand-accent flex items-center justify-center hover:bg-white/10 transition-colors shadow-[0_0_10px_rgba(255,179,0,0.1)]">
               <FaFacebookF />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white text-brand-primary flex items-center justify-center hover:bg-gray-100 transition-colors">
+            <a href="#" className="w-10 h-10 rounded-full bg-[#1a1c23] border border-white/10 text-brand-accent flex items-center justify-center hover:bg-white/10 transition-colors shadow-[0_0_10px_rgba(255,179,0,0.1)]">
               <FaYoutube />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white text-brand-primary flex items-center justify-center hover:bg-gray-100 transition-colors">
+            <a href="#" className="w-10 h-10 rounded-full bg-[#1a1c23] border border-white/10 text-brand-accent flex items-center justify-center hover:bg-white/10 transition-colors shadow-[0_0_10px_rgba(255,179,0,0.1)]">
               <FaInstagram />
             </a>
           </div>
