@@ -61,7 +61,7 @@ export default function Header() {
           <div className="relative w-40 h-16">
             <Image
               src="/images/logo.png"
-              alt="Prime Global Oman Logo"
+              alt="THE NIAZI'S LOGISTICS Logo"
               fill
               className="object-contain"
               priority

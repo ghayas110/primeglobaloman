@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { FaTruckMoving, FaTrain, FaShip, FaGlobeAmericas, FaWarehouse, FaSnowflake, FaChevronRight } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Services | Prime Global Oman',
-  description: 'Comprehensive logistics, transportation, and warehousing services by Prime Global Oman.',
+  title: 'Services | THE NIAZI\'S LOGISTICS',
+  description: 'Comprehensive logistics, transportation, and warehousing services by THE NIAZI\'S LOGISTICS.',
 };
 
 export default function Services() {

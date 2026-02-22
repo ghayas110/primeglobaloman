@@ -19,8 +19,8 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="bg-white p-2 rounded inline-block mb-6">
               <Image
-                src="/logo.png"
-                alt="Prime Global Oman Logo"
+                src="/images/logo.png"
+                alt="THE NIAZI'S LOGISTICS Logo"
                 width={150}
                 height={50}
                 className="object-contain"
@@ -33,11 +33,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="flex-shrink-0 mr-3 text-white" />
-                <a href="tel:0096877349876" className="hover:text-gray-200 transition-colors">00968 7734 9876</a>
+                <a href="tel:0769220162" className="hover:text-gray-200 transition-colors">076 922 0162</a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="flex-shrink-0 mr-3 text-white" />
-                <a href="mailto:info@primeglobaloman.com" className="hover:text-gray-200 transition-colors">info@primeglobaloman.com</a>
+                <a href="mailto:demonhunterg@gmail.com" className="hover:text-gray-200 transition-colors">demonhunterg@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="flex-shrink-0 mr-3 text-white" />
@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-orange-400 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Prime Global Oman. All rights reserved.
+            © {new Date().getFullYear()} THE NIAZI'S LOGISTICS. All rights reserved.
           </p>
           <div className="flex space-x-4">
             <a href="#" className="w-10 h-10 rounded-full bg-white text-brand-primary flex items-center justify-center hover:bg-gray-100 transition-colors">

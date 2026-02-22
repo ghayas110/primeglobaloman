@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { FaCheckCircle } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Introduction | Prime Global Oman',
-  description: 'Learn more about Prime Global Oman and our commitment to excellence.',
+  title: 'Introduction | THE NIAZI\'S LOGISTICS',
+  description: 'Learn more about THE NIAZI\'S LOGISTICS and our commitment to excellence.',
 };
 
 export default function Introduction() {
@@ -43,7 +43,7 @@ export default function Introduction() {
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image 
                 src="/images/service2.png" 
-                alt="About Prime Global Oman" 
+                alt="About THE NIAZI'S LOGISTICS" 
                 fill 
                 className="object-cover"
               />
@@ -51,12 +51,12 @@ export default function Introduction() {
 
             {/* Right Column - Text */}
             <div>
-               <span className="text-brand-primary font-bold tracking-wider uppercase text-sm">About Prime Global Oman</span>
-               <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2 mb-6">Introduction Prime Global Oman</h2>
+               <span className="text-brand-primary font-bold tracking-wider uppercase text-sm">About THE NIAZI'S LOGISTICS</span>
+               <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2 mb-6">Introduction THE NIAZI'S LOGISTICS</h2>
                
                <div className="space-y-6 text-brand-subtext leading-relaxed">
                  <p>
-                   Prime Global Oman (Prime Global Oman) was established with a mission to simplify global trade. We have grown into one of the leading logistics operators, offering a full spectrum of supply chain solutions.
+                   THE NIAZI'S LOGISTICS (THE NIAZI'S LOGISTICS) was established with a mission to simplify global trade. We have grown into one of the leading logistics operators, offering a full spectrum of supply chain solutions.
                  </p>
                  <p>
                    Our expertise spans across Sea Freight, Air Freight, Road Transport, and comprehensive Warehouse Management. We pride ourselves on delivering customized solutions that meet the unique requirements of each client, regardless of their industry.

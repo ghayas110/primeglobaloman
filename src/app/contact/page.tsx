@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Contact Us | Prime Global Oman',
-  description: 'Get in touch with Prime Global Oman team today.',
+  title: 'Contact Us | THE NIAZI\'S LOGISTICS',
+  description: 'Get in touch with THE NIAZI\'S LOGISTICS team today.',
 };
 
 export default function Contact() {

@@ -19,9 +19,9 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 flex flex-col items-center">
-          <span className="text-brand-primary font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Welcome to Prime Global Oman</span>
+          <span className="text-brand-primary font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Welcome to THE NIAZI'S LOGISTICS</span>
           <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-white mb-6 uppercase max-w-4xl">
-            Prime Global Oman
+            THE NIAZI'S LOGISTICS
           </h1>
           <p className="text-gray-200 mb-8 max-w-2xl text-lg md:text-xl">
             We provide fast, reliable, and secure logistics solutions tailored to meet your business needs, connecting you globally with excellence.
@@ -65,9 +65,9 @@ export default function Home() {
           </div>
           <div>
             <span className="text-brand-primary font-bold tracking-wider uppercase text-sm">Introduction</span>
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2 mb-6">Introduction Prime Global Oman</h2>
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2 mb-6">Introduction THE NIAZI'S LOGISTICS</h2>
             <p className="text-brand-subtext mb-6 leading-relaxed">
-              Prime Global Oman (Prime Global Oman) is a leading provider of end-to-end supply chain solutions. We combine intercontinental Air and Ocean Freight with comprehensive Value-Added Logistics Services and Supply Chain Services. The range of Supply Chain Solutions can vary from simple transport or storage up to complex operations.
+              THE NIAZI'S LOGISTICS (THE NIAZI'S LOGISTICS) is a leading provider of end-to-end supply chain solutions. We combine intercontinental Air and Ocean Freight with comprehensive Value-Added Logistics Services and Supply Chain Services. The range of Supply Chain Solutions can vary from simple transport or storage up to complex operations.
             </p>
             <p className="text-brand-subtext mb-8 leading-relaxed">
               We optimize all activities around information, material and financial flow. We provide globally integrated end-to-end solutions tailored to our customers supply chain management needs with a special commitment to industry specific requirements.
@@ -86,7 +86,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <span className="text-brand-primary font-bold tracking-wider uppercase text-sm">Our Expertise</span>
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2">Service Prime Global Oman</h2>
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-brand-navy mt-2">Service THE NIAZI'S LOGISTICS</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

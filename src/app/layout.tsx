@@ -16,8 +16,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Prime Global Oman | Logistics Solutions",
-  description: "Prime Global Oman - Leading logistics and transportation solutions.",
+  title: "THE NIAZI'S LOGISTICS | Logistics Solutions",
+  description: "THE NIAZI'S LOGISTICS - Leading logistics and transportation solutions.",
 };
 
 export default function RootLayout({
