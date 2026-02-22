@@ -1,8 +1,26 @@
+"use client";
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaTruckMoving, FaTrain, FaShip, FaGlobeAmericas, FaWarehouse, FaSnowflake } from 'react-icons/fa';
+import { FaTruckMoving, FaTrain, FaShip, FaGlobeAmericas, FaWarehouse, FaSnowflake, FaBox, FaCheckCircle } from 'react-icons/fa';
 
 export default function Home() {
+  const [trackingId, setTrackingId] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTrackingLoading, setIsTrackingLoading] = useState(false);
+
+  const handleTrackingSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!trackingId.trim()) return;
+    setIsModalOpen(true);
+    setIsTrackingLoading(true);
+    // Simulate network delay
+    setTimeout(() => {
+      setIsTrackingLoading(false);
+    }, 1500);
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -38,16 +56,18 @@ export default function Home() {
                 <h3 className="text-brand-accent font-bold text-xl uppercase font-montserrat">Booking & Tracking</h3>
                 <p className="text-gray-300 text-sm">Enter your tracking number below</p>
              </div>
-             <div className="w-full md:w-2/3 flex">
+             <form className="w-full md:w-2/3 flex" onSubmit={handleTrackingSubmit}>
                <input 
                  type="text" 
+                 value={trackingId}
+                 onChange={(e) => setTrackingId(e.target.value)}
                  placeholder="Enter tracking ID..." 
                  className="flex-grow bg-white/5 border border-white/20 text-white rounded-l px-4 py-3 focus:outline-none focus:border-brand-primary placeholder-gray-500"
                />
-               <button className="bg-brand-secondary text-white font-bold px-6 py-3 rounded-r hover:bg-brand-primary transition-colors shadow-[0_0_15px_rgba(216,67,21,0.5)]">
+               <button type="submit" className="bg-brand-secondary text-white font-bold px-6 py-3 rounded-r hover:bg-brand-primary transition-colors shadow-[0_0_15px_rgba(216,67,21,0.5)]">
                  TRACKING
                </button>
-             </div>
+             </form>
            </div>
         </div>
       </section>
@@ -150,6 +170,71 @@ export default function Home() {
            </div>
         </div>
       </section>
+
+      {/* Tracking Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+          <div className="bg-[#1a1c23] border border-white/10 rounded-xl shadow-[0_0_30px_rgba(255,179,0,0.15)] w-full max-w-lg overflow-hidden relative">
+            {/* Header */}
+            <div className="bg-brand-gray p-6 border-b border-white/5 flex justify-between items-center">
+               <h3 className="text-xl font-montserrat font-bold text-white uppercase flex items-center">
+                 <FaBox className="mr-3 text-brand-primary" />
+                 Tracking Details
+               </h3>
+               <button onClick={() => setIsModalOpen(false)} className="text-gray-400 hover:text-white transition-colors text-2xl leading-none h-6 w-6 flex items-center justify-center">
+                  &times;
+               </button>
+            </div>
+            
+            {/* Body */}
+            <div className="p-8">
+               {isTrackingLoading ? (
+                 <div className="flex flex-col items-center justify-center py-8 space-y-4">
+                   <div className="w-12 h-12 border-4 border-brand-primary border-t-transparent rounded-full animate-spin shadow-[0_0_15px_rgba(204,0,0,0.5)]"></div>
+                   <p className="text-brand-subtext animate-pulse font-montserrat tracking-widest uppercase">Locating shipment {trackingId}...</p>
+                 </div>
+               ) : (
+                 <div className="space-y-6">
+                   <div className="flex justify-between items-center p-5 bg-white/5 border border-white/10 rounded-lg shadow-inner">
+                      <div>
+                        <p className="text-xs text-brand-subtext uppercase tracking-wider mb-1">Tracking Number</p>
+                        <p className="text-xl font-bold text-brand-accent tracking-widest">{trackingId}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-xs text-brand-subtext uppercase tracking-wider mb-1">Status</p>
+                        <div className="flex items-center text-green-500 font-bold tracking-wider">
+                           <FaCheckCircle className="mr-2" />
+                           IN TRANSIT
+                        </div>
+                      </div>
+                   </div>
+
+                   <div className="relative border-l-2 border-brand-primary/30 ml-3 space-y-8 pb-2 mt-8">
+                      <div className="relative pl-6">
+                         <div className="absolute w-4 h-4 bg-brand-primary rounded-full -left-[9px] top-1 shadow-[0_0_15px_rgba(204,0,0,0.8)] border border-white/20"></div>
+                         <h4 className="text-white font-bold mb-1 uppercase tracking-wide">Dispatched from Source</h4>
+                         <p className="text-brand-subtext text-sm">Karachi, Pakistan - {(new Date()).toLocaleDateString()}</p>
+                      </div>
+                      <div className="relative pl-6">
+                         <div className="absolute w-4 h-4 bg-white/10 rounded-full -left-[9px] top-1 border border-white/20"></div>
+                         <h4 className="text-gray-400 font-bold mb-1 uppercase tracking-wide">Arriving at Destination</h4>
+                         <p className="text-gray-500 text-sm">Estimated: 3-5 Business Days</p>
+                      </div>
+                   </div>
+                   
+                   <button 
+                     onClick={() => setIsModalOpen(false)}
+                     className="w-full mt-6 bg-brand-primary text-white font-bold py-4 rounded-lg hover:bg-brand-secondary transition-colors uppercase tracking-wider shadow-[0_0_20px_rgba(204,0,0,0.4)]"
+                   >
+                     Close Window
+                   </button>
+                 </div>
+               )}
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
